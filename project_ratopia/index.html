@@ -19,13 +19,15 @@
     <link rel="stylesheet" href="CSS/bootstrap-icons-1.13.1/bootstrap-icons.css">
     <link rel="stylesheet" href="./CSS/style.css">
 
+    <link rel="stylesheet" href="./CSS/loading.min.css">
+
 </head>
 
 <body>
     <header class="fixed-top">
 
         <nav
-            class="flex-nowrap flex-column flex-sm-row navbar nav-justified justify-content-center justify-content-sm-between navbar-expand-lg pt-4 px-1 px-md-4">
+            class="navbar flex-nowrap flex-column flex-sm-row nav-justified justify-content-center justify-content-sm-between navbar-expand-lg pt-4 px-1 px-md-4 container-fluid">
             <!-- Logo -->
             <div
                 class="container d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start align-items-center">
@@ -34,17 +36,20 @@
                         alt="" class=""></a>
 
             </div>
-            <ul class="nav flex-column mt-3 mt-sm-0 flex-sm-row justify-content-center flex-nowrap d-sm-inline-flex collapse navbar-collapse" id="collapseNav">
-                <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">Lore</a></li>
-                <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
-                <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
-                <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
-            </ul>
-                            <!-- button collapse -->
-                <button class="navbar-toggler border-0 d-sm-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="bi bi-chevron-compact-down" style="font-size: 3em; color: #8a8a8a;"></i></button>
+            <div class="collapse navbar-expand-sm d-flex flex-sm-row navbar-collapse justify-content-end " id="collapseNav">
+                  <ul class="navbar-nav ms-auto">
+                    <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">Lore</a></li>
+                    <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
+                    <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
+                    <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
+                </ul>
+            </div>
+            
+            <!-- button collapse -->
+            <button class="navbar-toggler border-0 d-sm-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-chevron-compact-down" style="font-size: 3em; color: #8a8a8a;"></i></button>
         </nav>
 
 
@@ -56,7 +61,9 @@
             <div class="container">
                 <h1 class="display-4">Welcome to Ratopia</h1>
                 <p class="lead">Explore the world of Ratopia, where adventure awaits!</p>
-                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                <div class="ld ld-jump" style="display: inline-block ;animation-duration: 2.5s;"><i class="bi bi-mouse"
+                        style="font-size: 3rem; color: white;"></i></div>
+
             </div>
         </section>
     </main>

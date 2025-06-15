@@ -3,8 +3,32 @@
     font-family: "Irish Grover";
 }
 
+body {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body:has(nav div.collapse.show)::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+
+
+
+}
+
+
+
 .navbar {
     --bs-link-color: white;
+    --bs-navbar-color: white;
     font-size: x-large;
     background: #000000;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 88%);
@@ -14,15 +38,64 @@
         width: 250px;
     }
 
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 576px) {
 
         font-size: xx-large;
     }
 
+
+}
+
+
+.navbar.navbar:has(.collapsing),
+.navbar.navbar:has(.collapse.show) {
+    padding-bottom: 40vh;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 88%);
+    transition: all 0.3s ease-in-out;
+
+    button.navbar-toggler {
+        transform: rotate(180deg);
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    /* 替換 Bootstrap 預設的 height 動畫 */
+    .collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.26s ease-in-out;
+    }
+
+    .collapse.show {
+        max-height: 40vh;
+    }
+
+    .collapsing {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.26s ease-in-out;
+    }
 }
 
 
 
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body:has(.navbar-collapse.show)::after {
+    opacity: 1;
+}
 
 .navbar-toggler {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
@@ -50,10 +123,10 @@
     --bs-nav-link-hover-color: grey;
 }
 
-body {
-    background-image: url('../img/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+section.hero {
+    margin-top: 20vh;
+
+    div.ld-jump:hover {
+        animation: none;
+    }
 }
