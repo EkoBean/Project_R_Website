@@ -1,0 +1,59 @@
+.h1,
+.navbar {
+    font-family: "Irish Grover";
+}
+
+.navbar {
+    --bs-link-color: white;
+    font-size: x-large;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 88%);
+    transition: all 0.3s ease-in-out;
+
+    img {
+        width: 250px;
+    }
+
+    @media screen and (max-width: 575px) {
+
+        font-size: xx-large;
+    }
+
+}
+
+
+
+
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: var(--bs-navbar-color);
+    background-color: transparent;
+    border: 0px;
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    --bs-nav-link-hover-color: grey;
+}
+
+body {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
