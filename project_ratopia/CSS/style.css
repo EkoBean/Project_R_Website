@@ -1,4 +1,5 @@
 .h1,
+.h2
 .navbar {
     font-family: "Irish Grover";
 }
@@ -123,10 +124,16 @@ body:has(.navbar-collapse.show)::after {
     --bs-nav-link-hover-color: grey;
 }
 
+/* Hero section */
 section.hero {
     margin-top: 20vh;
 
     div.ld-jump:hover {
         animation: none;
     }
+}
+
+/* Lore section */
+section.lore {
+    background-color: black;
 }
