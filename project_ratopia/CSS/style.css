@@ -1,15 +1,17 @@
-.h1,
-.h2,
-.nav-link {
-    font-family: "Irish Grover";
-}
-
 body {
     background-image: url('../img/banner.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    --bs-body-color: white;
+    --bs-body-bg: transparent;
+    --bs-body: ;
+    /* scroll bar var */
+    --sb-track-color: #000000;
+    --sb-thumb-color: #202020;
+    --sb-size: 0.4rem;
+
 }
 
 body:has(nav div.collapse.show)::after {
@@ -20,13 +22,62 @@ body:has(nav div.collapse.show)::after {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.1);
     pointer-events: none;
+}
+/* scrollbar CSS */
+*::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+*::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 4px;
+}
 
-
-
+@supports not selector(::-webkit-scrollbar) {
+    * {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
 }
 
 
+/* bluring background img while nav bar scroll-down  */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
+body:has(.navbar-collapse.show)::after {
+    opacity: 1;
+}
+
+/* font */
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    font-family: "Irish Grover";
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2,
+.h2 {
+    font-size: 2rem;
+}
+
+/* navbar */
 .navbar {
     --bs-link-color: white;
     --bs-navbar-color: white;
@@ -34,6 +85,7 @@ body:has(nav div.collapse.show)::after {
     background: #000000;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 88%);
     transition: all 0.3s ease-in-out;
+    font-family: "Irish Grover";
 
     img {
         width: 250px;
@@ -82,22 +134,6 @@ body:has(nav div.collapse.show)::after {
 
 
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-body:has(.navbar-collapse.show)::after {
-    opacity: 1;
-}
-
 .navbar-toggler {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
@@ -131,7 +167,8 @@ section.hero {
     div.ld-jump:hover {
         animation: none;
     }
-    .container{
+
+    .container {
         position: relative;
         z-index: 2;
         top: 7rem;
