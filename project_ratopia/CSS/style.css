@@ -1,5 +1,6 @@
 body {
-    background-image: url('../img/banner.jpg');
+    background-color: black;
+    /* background-image: url('../img/banner.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,6 +12,8 @@ body {
     --sb-track-color: #000000;
     --sb-thumb-color: #202020;
     --sb-size: 0.4rem;
+    /* section color */
+    --section-bg-color: black;
 
 }
 
@@ -23,14 +26,17 @@ body:has(nav div.collapse.show)::after {
     background-color: rgba(255, 255, 255, 0.1);
     pointer-events: none;
 }
+
 /* scrollbar CSS */
 *::-webkit-scrollbar {
     width: var(--sb-size)
 }
+
 *::-webkit-scrollbar-track {
     background: var(--sb-track-color);
     border-radius: 4px;
 }
+
 *::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
     border-radius: 4px;
@@ -117,7 +123,7 @@ h2,
     /* 替換 Bootstrap 預設的 height 動畫 */
     .collapse {
         max-height: 0;
-        overflow: hidden;
+        /* overflow: hidden; */
         transition: max-height 0.26s ease-in-out;
     }
 
@@ -177,5 +183,61 @@ section.hero {
 
 /* Lore section */
 section.lore {
-    background-color: black;
+    /* background-color: var(--section-bg-color); */
+}
+
+/* word section */
+section.world {
+    /* background-color: var(--section-bg-color); */
+}
+
+.world div.card {
+    height: 25vh;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+/* card-md-height */
+@media screen and (min-width: 768px) {
+    .world div.card {
+        height: 50vh;
+    }
+}
+
+.world div.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: grayscale(80%) blur(0.5px);
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: inherit;
+    /* 若有圓角，繼承 */
+}
+
+.world div.card:hover::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    backdrop-filter: grayscale(50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.world div.card h3 {
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+}
+
+.world div.card:hover>h3 {
+    transform: scale(1.4) translateY(-5px);
 }

@@ -27,24 +27,25 @@
     <header class="fixed-top">
 
         <nav
-            class="navbar flex-nowrap flex-column flex-sm-row nav-justified justify-content-center justify-content-sm-between navbar-expand-lg pt-4 px-1 px-md-4 container-fluid">
+            class="navbar flex-nowrap flex-column flex-sm-row nav-justified justify-content-center justify-content-sm-between navbar-expand-lg pt-4 px-1 container-fluid">
             <!-- Logo -->
             <div
-                class="container d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start align-items-center">
+                class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start align-items-center ps-sm-3">
 
                 <a href="" class="d-flex justify-content-center justify-content-sm-start "><img src="./img/LOGO.png"
                         alt="" class=""></a>
 
             </div>
-            <div class="collapse navbar-expand-sm d-flex flex-sm-row navbar-collapse justify-content-end " style="overflow: auto; scroll-behavior: smooth; " id="collapseNav">
-                  <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-expand-sm d-flex flex-sm-row navbar-collapse align-items-center justify-content-center px-sm-3"
+                style="overflow: auto; scroll-behavior: smooth; " id="collapseNav">
+                <ul class="navbar-nav ms-auto">
                     <li> <a href="#lore" class="nav-link ps-1 ps-md-3 my-1">Lore</a></li>
-                    <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
+                    <li> <a href="#world" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
                     <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
                     <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
                 </ul>
             </div>
-            
+
             <!-- button collapse -->
             <button class="navbar-toggler border-0 d-sm-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseNav" aria-controls="navbarNav" aria-expanded="false"
@@ -59,9 +60,12 @@
         <section class="hero d-flex flex-column justify-content-center align-items-center text-center"
             style="background-image: url('./img/hero-bg.jpg'); background-size: cover; height: 90vh; color: white;">
             <div class="container">
-                <h1 class="h1 display-4" style="text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);">Build, Govern, Thrive — Welcome to Ratopia!</h1>
-                <div class="ld ld-jump mt-5" style="display: inline-block ;animation-duration: 2.5s;"><i class="bi bi-mouse"
-                        style="font-size: 3rem; color: white;"></i></div>
+                <h1 class="h1 display-4" style="text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);">Build, Govern, Thrive —
+                    Welcome to Ratopia!</h1>
+                <a href="#lore">
+                    <div class="ld ld-jump mt-5" style="display: inline-block ;animation-duration: 2.5s;"><i
+                            class="bi bi-mouse" style="font-size: 3rem; color: white;"></i></div>
+                </a>
 
             </div>
         </section>
@@ -69,17 +73,47 @@
         <section id="lore" class="lore py-5">
             <div class="container-fluid">
                 <h2 class="text-center mb-4">There was long time ago</h2>
-                <p class="lead text-center">Discover the rich history and lore of Ratopia, a land filled with magic,
-                    mystery, and adventure.</p>
+                <p class="container-sm lead text-center">After centuries of hiding from the surface world, rats have
+                    forged a new path below ground. As the founder of a new settlement, you decide how history remembers
+                    your reign. Will your colony be a beacon of hope — or a totalitarian empire?</p>
                 <div class="row mt-4">
-                    <div class="col-md-6">
-                        <h3>Origins</h3>
-                        <p>Ratopia was founded centuries ago by the first rat settlers who discovered the magical
-                            properties of the land...</p>
+                    <video controls height="35%" loop>
+                        <source src="./img/vid/Ratopia_Intro.webm" type="video/webm">
+                        <source src="./img/vid/Ratopia_Opening_Dummy.wmv" type="video/mp4">
+                        您的瀏覽器不支援影片播放。
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!--world  -->
+        <section id="world" class="world py-5 container">
+            <h2 class="text-center mb-4">
+                Pick Your Playground!
+            </h2>
+            <div class=" row row-cols-1 row-cols-md-4 flex-md-row align-items-stretch g-3">
+                <div class="col" id="forest">
+                    <div class="card d-flex align-items-center justify-content-end text-center pb-3"
+                        style="background-image: url(./img/card-img.png);">
+                        <h3>Forest</h3>
                     </div>
-                    <div class="col-md-6">
-                        <h3>Legends</h3>
-                        <p>Many legends speak of brave heroes and mythical creatures that roam the lands of Ratopia...</p>
+                </div>
+                <div class="col" id="marsh">
+                    <div class="card d-flex align-items-center justify-content-end text-center pb-3"
+                        style="background-image: url(./img/card-img-1.png);">
+                        <h3>Marsh</h3>
+                    </div>
+                </div>
+                <div class="col" id="volcano">
+                    <div class="card d-flex align-items-center justify-content-end text-center pb-3"
+                        style="background-image: url(./img/card-img-2.png);">
+                        <h3>Volcano</h3>
+                    </div>
+                </div>
+                <div class="col" id="desert">
+                    <div class="card d-flex align-items-center justify-content-end text-center pb-3"
+                        style="background-image: url(./img/card-img-3.png);">
+                        <h3>Desert</h3>
                     </div>
                 </div>
             </div>
