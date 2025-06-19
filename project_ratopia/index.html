@@ -39,10 +39,10 @@
             <div class="collapse navbar-expand-sm d-flex flex-sm-row navbar-collapse align-items-center justify-content-center px-sm-3"
                 style="overflow: auto; scroll-behavior: smooth; " id="collapseNav">
                 <ul class="navbar-nav ms-auto">
-                    <li> <a href="#lore" class="nav-link ps-1 ps-md-3 my-1">Lore</a></li>
-                    <li> <a href="#world" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
-                    <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
-                    <li> <a href="" class="nav-link ps-1 ps-md-3 my-1">World</a></li>
+                    <li> <a href="#lore" class="nav-link ps-1 ps-md-3 my-1 py-1">Lore</a></li>
+                    <li> <a href="#world" class="nav-link ps-1 ps-md-3 my-1 py-1">World</a></li>
+                    <li> <a href="#system" class="nav-link ps-1 ps-md-3 my-1 py-1">System</a></li>
+                    <li> <a href="#news" class="nav-link ps-1 ps-md-3 my-1 py-1">News</a></li>
                 </ul>
             </div>
 
@@ -117,8 +117,50 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
+        <!-- system intro section -->
+
+        <section class="system container">
+            <h2>Game System</h2>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="myTab" role="">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">
+                        Home
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        Profile
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+                        type="button" role="tab" aria-controls="messages" aria-selected="false">
+                        Messages
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    home
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    profile
+                </div>
+                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                    messages
+                </div>
+            </div>
+
+            </div>
+        </section>
+
     </main>
     <footer>
         <!-- place footer here -->
