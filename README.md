@@ -5,8 +5,9 @@
 2025/6/16 03:27 "V0.02 nav bar complete" commit. <br>
 2025/6/19 12:04 git pull "V0.033 scroll-bar" <br>
 2025/6/19 12:04 "V0.04 hero section& world section complete" <br>
-2025/6/20 10:00 git pull V0.042
+2025/6/20 10:00 git pull V0.042 <br>
 2025/6/20 11:55 "V0.043 System section tab nav bar complete" commit<br>
+2025/6/20 13:37 V0.044 System section carousel build up<br>
 <br>
 <br>
 <br>
