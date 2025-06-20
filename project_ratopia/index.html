@@ -121,40 +121,53 @@
 
         <!-- system intro section -->
 
-        <section class="system container">
-            <h2>Game System</h2>
+        <section class="system container-fluid " id="system">
             <!-- Nav tabs -->
-            <ul class="nav nav-tabs" id="myTab" role="">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+             <h2 class="text-center h1 pt-5 pb-3">Game System</h2>
+            <ul class="nav nav-tabs flex-column flex-sm-row align-items-center justify-content-sm-center container-sm" id="myTab" role="">
+                <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
+                    <button class="nav-link d-block active" id="home-tab" data-bs-toggle="tab" data-bs-target="#introExplore"
                         type="button" role="tab" aria-controls="home" aria-selected="true">
-                        Home
+                        Explore
                     </button>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
+                    <button class="nav-link d-block" id="profile-tab" data-bs-toggle="tab" data-bs-target="#introBuild"
                         type="button" role="tab" aria-controls="profile" aria-selected="false">
-                        Profile
+                        Build
                     </button>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+                <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
+                    <button class="nav-link d-block" id="messages-tab" data-bs-toggle="tab" data-bs-target="#introBattle"
                         type="button" role="tab" aria-controls="messages" aria-selected="false">
-                        Messages
+                        Battle
+                    </button>
+                </li>
+                <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
+                    <button class="nav-link d-block" id="messages-tab" data-bs-toggle="tab" data-bs-target="#introEconomy"
+                        type="button" role="tab" aria-controls="messages" aria-selected="false">
+                        Economy
                     </button>
                 </li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    home
+                <!-- Explore tab -->
+                <div class="tab-pane active" id="introExplore" role="tabpanel" aria-labelledby="introExplore-tab">
+                <div class="h2">Extend the Territory</div>
                 </div>
-                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    profile
+                <!-- Build tab -->
+                <div class="tab-pane" id="introBuild" role="tabpanel" aria-labelledby="introBuild-tab">
+                    Build
                 </div>
-                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                    messages
+                <!-- Battle tab -->
+                <div class="tab-pane" id="introBattle" role="tabpanel" aria-labelledby="introBattle-tab">
+                    battle
+                </div>
+                <!-- Economy tab -->
+                <div class="tab-pane" id="introEconomy" role="tabpanel" aria-labelledby="introEconimy-tab">
+                    Economy
                 </div>
             </div>
 

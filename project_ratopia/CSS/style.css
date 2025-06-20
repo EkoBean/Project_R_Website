@@ -219,7 +219,6 @@ section.world {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     border-radius: inherit;
-    /* 若有圓角，繼承 */
 }
 
 .world div.card:hover::after {
@@ -240,4 +239,68 @@ section.world {
 
 .world div.card:hover>h3 {
     transform: scale(1.4) translateY(-5px);
+}
+
+/* game system intro section */
+
+/* reset bootstrap css */
+.nav-tabs {
+    --bs-nav-tabs-border-width: 0px;
+    --bs-nav-tabs-border-color: var(--bs-border-color);
+    --bs-nav-tabs-border-radius: var(--bs-border-radius);
+    --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
+    --bs-nav-tabs-link-active-border-color:
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: white;
+    border-radius: 0px;
+}
+
+/* nav li, nav button style */
+li.nav-item:has(button.active) {
+    background-color: rgb(39, 39, 39);
+}
+
+li.nav-item {
+    border-radius: 5px;
+}
+
+.nav-link {
+    color: white;
+}
+
+/* cutomize sm style */
+@media screen and (min-width: 576px) {
+
+    li.nav-item:hover,
+    li.nav-item:has(button.active):hover {
+        background-color: rgb(68, 68, 68);
+        transition: all 0.3s ease-in-out;
+    }
+
+    li.nav-item:has(button.active) {
+        background-color: transparent;
+        border: 1px white solid;
+    }
+
+    /* extend the button click area */
+    li.nav-item button.nav-link {
+        display: block;
+        width: inherit;
+    }
+
+    li.nav-item:hover button.nav-link {
+        color: white;
+    }
+}
+
+/* tab panes */
+div.tab-pane.active {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
