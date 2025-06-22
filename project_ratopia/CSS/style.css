@@ -45,6 +45,7 @@ body:has(nav div.collapse.show)::after {
 @supports not selector(::-webkit-scrollbar) {
     * {
         scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+        scroll-behavior: smooth;
     }
 }
 
@@ -166,6 +167,10 @@ h2,
     --bs-nav-link-hover-color: grey;
 }
 
+.topSpace {
+    padding-top: 200px;
+}
+
 /* Hero section */
 section.hero {
     margin-top: 20vh;
@@ -284,7 +289,7 @@ li.nav-item {
 
     li.nav-item:has(button.active) {
         background-color: transparent;
-        border: 1px white solid;
+        outline: solid white 1px;
     }
 
     /* extend the button click area */
@@ -299,6 +304,12 @@ li.nav-item {
 }
 
 /* tab panes */
+ol li,
+ul li {
+    list-style: none;
+}
+
+
 div.tab-pane.active {
     display: flex;
     justify-content: center;

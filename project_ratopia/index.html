@@ -32,11 +32,11 @@
             <div
                 class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start align-items-center ps-sm-3">
 
-                <a href="" class="d-flex justify-content-center justify-content-sm-start "><img src="./img/LOGO.png"
+                <a href="#top" class="d-flex justify-content-center justify-content-sm-start "><img src="./img/LOGO.png"
                         alt="" class=""></a>
 
             </div>
-            <div class="collapse navbar-expand-sm d-flex flex-sm-row navbar-collapse align-items-center justify-content-center px-sm-3"
+            <div class="collapse navbar-expand-sm d-flex flex-sm-row navbar-collapse align-items-center justify-content-center px-md-4"
                 style="overflow: auto; scroll-behavior: smooth; " id="collapseNav">
                 <ul class="navbar-nav ms-auto">
                     <li> <a href="#lore" class="nav-link ps-1 ps-md-3 my-1 py-1">Lore</a></li>
@@ -56,6 +56,8 @@
 
     </header>
     <main>
+        <!-- #top anchor -->
+        <div id="top" style="position: absolute; top:0;"></div>
         <!-- Hero Section -->
         <section class="hero d-flex flex-column justify-content-center align-items-center text-center"
             style="background-image: url('./img/hero-bg.jpg'); background-size: cover; height: 90vh; color: white;">
@@ -70,7 +72,7 @@
             </div>
         </section>
         <!-- Lore section -->
-        <section id="lore" class="lore py-5">
+        <section id="lore" class="lore topSpace">
             <div class="container-fluid">
                 <h2 class="text-center mb-4">There was long time ago</h2>
                 <p class="container-sm lead text-center">After centuries of hiding from the surface world, rats have
@@ -87,7 +89,7 @@
         </section>
 
         <!--world  -->
-        <section id="world" class="world py-5 container">
+        <section id="world" class="world topSpace container">
             <h2 class="text-center mb-4">
                 Pick Your Playground!
             </h2>
@@ -121,33 +123,37 @@
 
         <!-- system intro section -->
 
-        <section class="system container-fluid " id="system">
+        <section class="system container-fluid topSpace" id="system">
             <!-- Nav tabs -->
             <h2 class="text-center h1 pt-5 pb-3">Game System</h2>
-            <ul class="nav nav-tabs flex-column flex-sm-row align-items-center justify-content-sm-center container-sm"
+            <ul class="nav nav-tabs flex-column flex-sm-row align-items-center justify-content-sm-center"
                 id="myTab" role="">
+                <!-- button:explore -->
                 <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
-                    <button class="nav-link d-block active" id="home-tab" data-bs-toggle="tab"
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                         data-bs-target="#introExplore" type="button" role="tab" aria-controls="home"
                         aria-selected="true">
                         Explore
                     </button>
                 </li>
+                <!-- button: build -->
                 <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
-                    <button class="nav-link d-block" id="profile-tab" data-bs-toggle="tab" data-bs-target="#introBuild"
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#introBuild"
                         type="button" role="tab" aria-controls="profile" aria-selected="false">
                         Build
                     </button>
                 </li>
+                <!-- button: battle -->
                 <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
-                    <button class="nav-link d-block" id="messages-tab" data-bs-toggle="tab"
+                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab"
                         data-bs-target="#introBattle" type="button" role="tab" aria-controls="messages"
                         aria-selected="false">
                         Battle
                     </button>
                 </li>
+                <!-- button: economy -->
                 <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0" role="presentation">
-                    <button class="nav-link d-block" id="messages-tab" data-bs-toggle="tab"
+                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab"
                         data-bs-target="#introEconomy" type="button" role="tab" aria-controls="messages"
                         aria-selected="false">
                         Economy
@@ -156,101 +162,93 @@
             </ul>
 
             <!-- Tab panes -->
-            <div class="tab-content">
+            <div class="tab-content container-sm">
                 <!-- Explore tab -->
-                <div class="tab-pane active" id="introExplore"
-                    role="tabpanel" aria-labelledby="introExplore-tab">
-                    <div class="container d-flex flex-column justify-content-center">
+                <div class="tab-pane active" id="introExplore" role="tabpanel" aria-labelledby="introExplore-tab">
+                    <div class="d-flex flex-column justify-content-center px-sm-5">
                         <div class="h4 pb-3 border-bottom text-center">Extend the Territory</div>
-                        <p class="text-start">Uncover hidden resources, ancient ruins, and secrets that expand your kingdom’s reach. Exploration is the first step toward greatness.</p>
-                        <div id="exploreCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li
-                                    data-bs-target="#exploreCarousel"
-                                    data-bs-slide-to="0"
-                                    class="active"
-                                    aria-current="true"
-                                    aria-label="First slide"
-                                ></li>
-                                <li
-                                    data-bs-target="#exploreCarousel"
-                                    data-bs-slide-to="1"
-                                    aria-label="Second slide"
-                                ></li>
-                                <li
-                                    data-bs-target="#exploreCarousel"
-                                    data-bs-slide-to="2"
-                                    aria-label="Third slide"
-                                ></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active">
-                                    <img
-                                        src="./img/Gameintro02.jpg"
-                                        class="w-100 d-block"
-                                        alt="First slide"
-                                    />
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Title</h3>
-                                        <p>Description</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img
-                                        src="./img/Gameintro03.jpg"
-                                        class="w-100 d-block"
-                                        alt="Second slide"
-                                    />
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Title</h3>
-                                        <p>Description</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img
-                                        src="./img/Gameintro05.jpg"
-                                        class="w-100 d-block"
-                                        alt="Third slide"
-                                    />
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Title</h3>
-                                        <p>Description</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button
-                                class="carousel-control-prev"
-                                type="button"
-                                data-bs-target="#exploreCarousel"
-                                data-bs-slide="prev"
-                            >
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button
-                                class="carousel-control-next"
-                                type="button"
-                                data-bs-target="#exploreCarousel"
-                                data-bs-slide="next"
-                            >
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        
+                        <p class="text-start">Uncover hidden resources, ancient ruins, and secrets that expand your
+                            kingdom’s reach. Exploration is the first step toward greatness.</p>
+
                     </div>
                 </div>
                 <!-- Build tab -->
                 <div class="tab-pane" id="introBuild" role="tabpanel" aria-labelledby="introBuild-tab">
-                    Build
+                    <div class="d-flex flex-column justify-content-center px-sm-5">
+                        <div class="h4 pb-3 border-bottom text-center">
+                            Shape Your City
+                        </div>
+                        <p class="text-start">
+                            Plan, place, and grow your settlement. Every structure serves your rats—comfort, production,
+                            or prestige.
+                        </p>
+                    </div>
                 </div>
                 <!-- Battle tab -->
                 <div class="tab-pane" id="introBattle" role="tabpanel" aria-labelledby="introBattle-tab">
-                    battle
+                    <div class="d-flex flex-column justify-content-center px-sm-5">
+                        <div class="h4 pb-3 border-bottom text-center">
+                            Defend and Conquer
+                        </div>
+                        <p class="text-start">
+                            Raise armies, repel threats, and prove your might in tactical combat against wild beasts and
+                            rival clans.
+                        </p>
+                    </div>
                 </div>
                 <!-- Economy tab -->
                 <div class="tab-pane" id="introEconomy" role="tabpanel" aria-labelledby="introEconimy-tab">
-                    Economy
+                    <div class="d-flex flex-column justify-content-center px-sm-5">
+                        <div class="h4 pb-3 border-bottom text-center">
+                            Manage and Trade
+                        </div>
+                        <p class="text-start">
+                            Balance production, sustain growth, and control the flow of goods. A thriving economy powers
+                            your kingdom.
+                        </p>
+                    </div>
+                </div>
+                <!-- Carousel -->
+                <div id="exploreCarousel" class="carousel slide pt-3" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#exploreCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                            aria-label="First slide"></li>
+                        <li data-bs-target="#exploreCarousel" data-bs-slide-to="1" aria-label="Second slide"></li>
+                        <li data-bs-target="#exploreCarousel" data-bs-slide-to="2" aria-label="Third slide"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="./img/Gameintro02.jpg" class="w-100 d-block" alt="First slide" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Title</h3>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Gameintro03.jpg" class="w-100 d-block" alt="Second slide" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Title</h3>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Gameintro05.jpg" class="w-100 d-block" alt="Third slide" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Title</h3>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#exploreCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#exploreCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
 
@@ -267,6 +265,7 @@
         crossorigin="anonymous"></script>
 
     <script src="./CSS/bootstrap-5.3.6-dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
