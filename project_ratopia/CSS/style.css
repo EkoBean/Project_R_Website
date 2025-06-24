@@ -85,6 +85,19 @@ h2,
 }
 
 /* navbar */
+/* clickthrou setting */
+header {
+    /* make the parts without menu be clickthrou */
+    pointer-events: none;
+
+    /* logo pinter event */
+    div:has(a[href="#top"]),
+    button,
+    a {
+        pointer-events: all;
+    }
+}
+
 .navbar {
     --bs-link-color: white;
     --bs-navbar-color: white;
@@ -248,7 +261,7 @@ section.world {
 
 /* game system intro section */
 
-/* reset bootstrap css */
+/* reset bootstrap css (gameSys intro section) */
 .nav-tabs {
     --bs-nav-tabs-border-width: 0px;
     --bs-nav-tabs-border-color: var(--bs-border-color);
@@ -265,7 +278,7 @@ section.world {
     border-radius: 0px;
 }
 
-/* nav li, nav button style */
+/* nav li, nav button style (gameSys intro section) */
 li.nav-item:has(button.active) {
     background-color: rgb(39, 39, 39);
 }
@@ -278,7 +291,7 @@ li.nav-item {
     color: white;
 }
 
-/* cutomize sm style */
+/* cutomize sm style (gameSys intro section) */
 @media screen and (min-width: 576px) {
 
     li.nav-item:hover,
@@ -292,7 +305,7 @@ li.nav-item {
         outline: solid white 1px;
     }
 
-    /* extend the button click area */
+    /* extend the button click area (gameSys intro section) */
     li.nav-item button.nav-link {
         display: block;
         width: inherit;
@@ -303,7 +316,7 @@ li.nav-item {
     }
 }
 
-/* tab panes */
+/* tab panes  (gameSys intro section)*/
 ol li,
 ul li {
     list-style: none;
@@ -314,4 +327,18 @@ div.tab-pane.active {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+}
+
+.carousel-caption {
+    background: transparent !important;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    right: 0%;
+    bottom: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-right: 5rem;
+    color: var(--bs-carousel-caption-color);
+    text-align: end;
+
 }
