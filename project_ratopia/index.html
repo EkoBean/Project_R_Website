@@ -138,7 +138,7 @@
                 </li>
                 <!-- button: build -->
                 <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0 carouselBtn "
-                    role="presentation" data-slide-to="1">
+                    role="presentation" data-slide-to="2">
                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#introBuild"
                         type="button" role="tab" aria-controls="profile" aria-selected="false">
                         Build
@@ -146,7 +146,7 @@
                 </li>
                 <!-- button: battle -->
                 <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0 carouselBtn"
-                    role="presentation" data-slide-to="2">
+                    role="presentation" data-slide-to="4">
                     <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#introBattle"
                         type="button" role="tab" aria-controls="messages" aria-selected="false">
                         Battle
@@ -154,7 +154,7 @@
                 </li>
                 <!-- button: economy -->
                 <li class="col nav-item container-fluid d-flex justify-content-center h3 p-0 carouselBtn"
-                    role="presentation" data-slide-to="3">
+                    role="presentation" data-slide-to="6">
                     <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#introEconomy"
                         type="button" role="tab" aria-controls="messages" aria-selected="false">
                         Economy
@@ -209,55 +209,122 @@
                         </p>
                     </div>
                 </div>
-                <!-- Carousel -->
-                <div id="gameSystemCarousel" class="carousel slide pt-3" data-bs-ride="carousel">
+            </div> <!-- end of Tab panes -->
 
+            <!-- Carousel -->
+            <div id="gameSystemCarousel" class="carousel slide pt-3 container-sm" data-bs-ride="carousel">
 
-                    <!-- underline indacator -->
-                    <!-- <ol class="carousel-indicators">
-                        <li data-bs-target="#gameSystemCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                            aria-label="First slide"></li>
-                        <li data-bs-target="#gameSystemCarousel" data-bs-slide-to="1" aria-label="Second slide"></li>
-                        <li data-bs-target="#gameSystemCarousel" data-bs-slide-to="2" aria-label="Third slide"></li>
-                    </ol> -->
-
-
-                    <!-- carousel gallery -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <img src="./img/Gameintro02.jpg" class="w-100 d-block" alt="First slide" />
-                            <div class="carousel-caption d-none d-sm-block bg-black">
-                                <h3>Explore</h3>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/Gameintro03.jpg" class="w-100 d-block" alt="Second slide" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/Gameintro05.jpg" class="w-100 d-block" alt="Third slide" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/Gameintro06.jpg" class="w-100 d-block" alt="Fourth slide" />
+                <!-- carousel gallery -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="./img/Gameintro11.jpg" class="w-100 d-block" alt="First slide" />
+                        <div class="carousel-caption d-none d-sm-block ">
+                            <h3>Explore</h3>
                         </div>
                     </div>
-                    <!-- prev arrow -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#gameSystemCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <!-- next prev -->
-                    <button class="carousel-control-next" type="button" data-bs-target="#gameSystemCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-            <div id="test">
+                    <!-- slide 2 -->
+                    <div class="carousel-item">
+                        <img src="./img/Gameintro13.jpg" class="w-100 d-block" alt="Second slide" />
+                    </div>
+                    <!-- slide 3 -->
+                    <div class="carousel-item">
+                        <img src="./img/Gameintro03.jpg" class="w-100 d-block" alt="Third slide" />
+                        <div class="carousel-caption d-none d-sm-block ">
+                            <h3>Build</h3>
+                        </div>
+                    </div>
+                    <!-- slide 4 -->
+                    <div class="carousel-item">
+                        <img src="./img/Gameintro07.jpg" class="w-100 d-block" alt="Fourth slide" />
+                    </div>
+                    <!-- slide 5-->
+                    <div class="carousel-item">
+                        <img src="./img/Gameintro02.jpg" class="w-100 d-block" alt="Fifth slide" />
+                        <div class="carousel-caption d-none d-sm-block ">
+                            <h3>Battle</h3>
+                        </div>
+                    </div>
+                    <!-- slide 6-->
+                    <div class="carousel-item">
+                        <img src="./img/Gameintro12.jpg" class="w-100 d-block" alt="Sixth slide" />
+                        <div class="carousel-caption d-none d-sm-block ">
+                        </div>
+                    </div>
+                    <!-- slide 7 -->
+                    <div class="carousel-item">
+                        <img src="./img/Gameintro08.jpg" class="w-100 d-block" alt="Seventh slide" />
+                        <div class="carousel-caption d-none d-sm-block ">
+                            <h3>Economy</h3>
+                        </div>
+                    </div>
+                    <!-- slide 8-->
+                    <div class="carousel-item">
+                        <img src="./img/Gameintro06.jpg" class="w-100 d-block" alt="Eighth slide" />
+                        <div class="carousel-caption d-none d-sm-block ">
+                        </div>
+                    </div>
+                </div> <!-- end of slide-->
+
+                <!-- prev arrow -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#gameSystemCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <!-- next prev -->
+                <button class="carousel-control-next" type="button" data-bs-target="#gameSystemCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
 
             </div>
             </div>
+            <!-- end of carousel -->
+        </section>
+
+        <!-- News Section -->
+        <section class="news container-fluid topSpace topSpace" id="news">
+            <h2 class="text-center">News</h2>
+            <div>
+                <div class=" row row-cols-1 row-cols-md-2 flex-md-row align-items-stretch g-3">
+                    <div class="col" id="forest">
+                        <div class="card d-flex align-items-start justify-content-end text-start p-3">
+                            <div class="h4">News Title</div class="h4">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci commodi natus
+                                architecto iste nesciunt molestiae deserunt laudantium eligendi quam odit autem nemo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col" id="marsh">
+                        <div class="card d-flex align-items-start justify-content-end text-start p-3">
+                            <div class="h4">News Title</div class="h4">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci commodi natus
+                                architecto iste nesciunt molestiae deserunt laudantium eligendi quam odit autem nemo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col" id="volcano">
+                        <div class="card d-flex align-items-start justify-content-end text-start p-3">
+                            <div class="h4">News Title</div class="h4">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci commodi natus
+                                architecto iste nesciunt molestiae deserunt laudantium eligendi quam odit autem nemo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col" id="desert">
+                        <div class="card d-flex align-items-start justify-content-end text-start p-3">
+                            <div class="h4">News Title</div class="h4">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci commodi natus
+                                architecto iste nesciunt molestiae deserunt laudantium eligendi quam odit autem nemo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
