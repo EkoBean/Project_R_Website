@@ -1,3 +1,28 @@
+/* function library */
+
+/* line clamp: turncate the paragraph */
+.lind-clamp-4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    overflow: hidden;
+}
+.lind-clamp-5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 5;
+    overflow: hidden;
+}
+
+/* the space of section top */
+.topSpace {
+    padding-top: 200px;
+}
+
+/* ===========Customize Style ====================================================================================================================== */
+
+
+/* body CSS */
 body {
     background-color: black;
     /* background-image: url('../img/banner.jpg'); */
@@ -27,6 +52,8 @@ body:has(nav div.collapse.show)::after {
     pointer-events: none;
 }
 
+/* end of body setting*/
+
 /* scrollbar CSS */
 *::-webkit-scrollbar {
     width: var(--sb-size)
@@ -49,6 +76,8 @@ body:has(nav div.collapse.show)::after {
     }
 }
 
+/* end*/
+
 
 /* bluring background img while nav bar scroll-down  */
 body::after {
@@ -66,6 +95,8 @@ body::after {
 body:has(.navbar-collapse.show)::after {
     opacity: 1;
 }
+
+/* end */
 
 /* font */
 h3,
@@ -180,9 +211,7 @@ header {
     --bs-nav-link-hover-color: grey;
 }
 
-.topSpace {
-    padding-top: 200px;
-}
+
 
 /* Hero section */
 section.hero {
@@ -330,7 +359,7 @@ div.tab-pane.active {
 }
 
 .carousel-caption {
-    background: transparent ;
+    background: transparent;
     background: linear-gradient(270deg, rgba(255, 255, 255, 0.445) 0%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
     right: 0%;
@@ -341,4 +370,18 @@ div.tab-pane.active {
     color: var(--bs-carousel-caption-color);
     text-align: end;
 
+}
+
+/* news sectioin */
+.news div.card {
+    /* change the weight in html bootstrap */
+    border: rgb(255, 255, 255) solid;
+
+
+    p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        line-clamp: 5;
+        overflow: hidden;
+    }
 }
