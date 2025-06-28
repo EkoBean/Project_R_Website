@@ -1,16 +1,17 @@
 /* function library */
 
 /* line clamp: turncate the paragraph */
-.lind-clamp-4 {
+.line-clamp-4 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    line-clamp: 4;
+    -webkit-line-clamp: 4;
     overflow: hidden;
 }
-.lind-clamp-5 {
+
+.line-clamp-5 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    line-clamp: 5;
+    -webkit-line-clamp: 5;
     overflow: hidden;
 }
 
@@ -24,12 +25,7 @@
 
 /* body CSS */
 body {
-    background-color: black;
-    /* background-image: url('../img/banner.jpg'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
     --bs-body-color: white;
     --bs-body-bg: transparent;
     --bs-body: ;
@@ -42,13 +38,15 @@ body {
 
 }
 
+
+
 body:has(nav div.collapse.show)::after {
     content: "";
     position: fixed;
     inset: 0;
     z-index: 1;
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.582);
     pointer-events: none;
 }
 
@@ -78,7 +76,6 @@ body:has(nav div.collapse.show)::after {
 
 /* end*/
 
-
 /* bluring background img while nav bar scroll-down  */
 body::after {
     content: "";
@@ -97,6 +94,8 @@ body:has(.navbar-collapse.show)::after {
 }
 
 /* end */
+
+
 
 /* font */
 h3,
@@ -211,11 +210,36 @@ header {
     --bs-nav-link-hover-color: grey;
 }
 
+/* main background*/
+main {
+    background-color: black;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
+main .bg-filter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000004;
+    z-index: 0;
+    inset: 0;
+    backdrop-filter: brightness(100%) blur(0px);
 
+}
+
+/* main-wrapper z-index */
+.main-wrapper{
+    position:relative;
+    z-index: 0;
+}
 /* Hero section */
 section.hero {
-    margin-top: 20vh;
+    padding-top: 25vh;
+    z-index: 1;
 
     div.ld-jump:hover {
         animation: none;
@@ -223,14 +247,17 @@ section.hero {
 
     .container {
         position: relative;
-        z-index: 2;
+        z-index: 1;
         top: 7rem;
     }
 }
 
 /* Lore section */
 section.lore {
-    /* background-color: var(--section-bg-color); */
+    video{
+        object-fit: cover;
+        max-height: 50vh;
+    }
 }
 
 /* word section */
@@ -373,10 +400,17 @@ div.tab-pane.active {
 }
 
 /* news sectioin */
-.news div.card {
-    /* change the weight in html bootstrap */
-    border: rgb(255, 255, 255) solid;
 
+
+.news div.card {
+    /* change the card weight in html bootstrap */
+    border: rgb(255, 255, 255) solid;
+    padding: 1rem;
+    background-color: #000000;
+
+    .h3 {
+        font-family: var(--bs-body-font-family);
+    }
 
     p {
         display: -webkit-box;
@@ -384,4 +418,85 @@ div.tab-pane.active {
         line-clamp: 5;
         overflow: hidden;
     }
+
+    a.btn {
+        font-size: 1.3rem;
+    }
+
+}
+
+/* x-small img controll */
+@media screen and (max-width: 575px) {
+    .news div.card {
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+    }
+
+    .news img {
+        height: 30vh;
+        object-fit: cover;
+        border-radius: inherit;
+
+    }
+
+}
+
+/* whish list */
+.wishList{
+    padding-bottom: 200px;
+}
+.wishList iframe {
+    width: 100%;
+    max-width: 600px;
+}
+
+
+/* Wish List CTA fixed button */
+
+.buyIt {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+    background-color: #4A7285;
+    border-radius: 2.5cap;
+    text-decoration: none;
+    color: white;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+
+    p {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    i {
+        transform: rotate(0deg);
+    }
+}
+
+.buyIt,
+.buyIt i,
+.buyIt p {
+
+    transition: all ease 0.3s, transform ease 0.5s;
+}
+
+/* footer */
+footer {
+    position: relative;
+
+    a {
+        text-decoration: none;
+        color: var(--bs-color);
+    }
+
+    img {
+        height: 50px;
+    }
+
+    /* a:hover{
+        text-decoration: underline;
+        color: var(--bs-color);
+    } */
 }
