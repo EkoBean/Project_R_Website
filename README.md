@@ -11,7 +11,7 @@
 2025/6/25 12:30 "V0.050 System section finish, news section start" commit<br>
 2025/6/25 09:43 "V0.051 News section card, doco added" commit<br>
 2025/6/29 04:13 "V0.06 news, wishlist section, footer done.  bg(main) filter, fixed CTA button done." commit.<br>
-2025/6/30 12:52 "V0.061 World card expand intro"commit
+2025/6/30 12:52 "V0.061 World card expand intro"commit<br>
 <br>
 <br>
 <br>
@@ -22,3 +22,4 @@ Developable Function:<br>
 <!-- System section -->
 1.Border moving animation when switching .active tab.<br>
 V 2.Background color block swipe in animation when hovering.<br>
+3. Wolrd Intro cards: tap other place to collapse the cards. also prevent click event while selecting context.  <br>
