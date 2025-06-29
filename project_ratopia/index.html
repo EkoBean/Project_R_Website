@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <header class="fixed-top">
+    <header class="fixed-top z-5">
 
         <nav
             class="navbar flex-nowrap flex-column flex-sm-row nav-justified justify-content-center justify-content-sm-between navbar-expand-lg pt-4 px-1 container-fluid">
@@ -83,8 +83,7 @@
                         remembers
                         your reign. Will your colony be a beacon of hope — or a totalitarian empire?</p>
                     <div class="row mt-4">
-                        <video class="p-0" autoplay
-                        muted controls height="35%" loop>
+                        <video class="p-0" autoplay muted controls height="35%" loop>
                             <source src="./img/vid/Ratopia_Intro.webm" type="video/webm">
                             <source src="./img/vid/Ratopia_Opening_Dummy.wmv" type="video/mp4">
                             您的瀏覽器不支援影片播放。
@@ -94,35 +93,78 @@
             </section>
 
             <!--world  -->
-            <section id="world" class="world topSpace container">
+            <section id="world" class="world topSpace container-fluid">
                 <h2 class="text-center mb-4">
                     Pick Your Playground!
                 </h2>
-                <div class=" row row-cols-1 row-cols-md-4 flex-md-row align-items-stretch g-3">
-                    <div class="col" id="forest">
-                        <div class="card d-flex align-items-center justify-content-end text-center pb-3"
-                            style="background-image: url(./img/card-img.png);">
-                            <h3>Forest</h3>
+
+                <div class=" d-flex flex-column gap-4 flex-md-row justify-content-center flex-md-nowrap overflow-auto">
+
+                    <!-- forest intro -->
+
+                    <div class="card d-flex text-center p-5" style="background-image: url(./img/card-img.png);"
+                        id="forest">
+                        <div class="card-bg-filter"></div>
+                        <h2>Forest</h2>
+                        <div class="text-content">
+                            <p class="h3 pt-3">A Land of Life and Balance</p>
+                            <p class="">The Forest is where it all begins—lush, green, and rich with resources.
+                                Towering
+                                trees
+                                shelter your settlement from the elements while offering abundant wood and food. </p>
                         </div>
+                        <img src="./img/Forestintro.png" alt="">
                     </div>
-                    <div class="col" id="marsh">
-                        <div class="card d-flex align-items-center justify-content-end text-center pb-3"
-                            style="background-image: url(./img/card-img-1.png);">
-                            <h3>Marsh</h3>
+
+                    <!-- forest intro end -->
+
+                    <!-- Marsh intro -->
+
+                    <div class="card d-flex text-center p-5" style="background-image: url(./img/card-img-1.png);">
+                        <div class="card-bg-filter" id="marsh"></div>
+                        <h2>Marsh</h2>
+                        <div class="text-content">
+                            <p class="h3 pt-3">Mystery Lurks in the Mist</p>
+                            <p class="">The Marsh is a damp, eerie terrain veiled in fog. Life is tougher here—resources
+                                are scarce, and poisonous swamps slow down your growth.</p>
                         </div>
+                        <img src="./img/Marshintro.png" alt="">
                     </div>
-                    <div class="col" id="volcano">
-                        <div class="card d-flex align-items-center justify-content-end text-center pb-3"
-                            style="background-image: url(./img/card-img-2.png);">
-                            <h3>Volcano</h3>
+
+                    <!-- marsh intro end -->
+
+                    <!-- volcano intro -->
+
+                    <div class="card d-flex text-center p-5" style="background-image: url(./img/card-img-2.png);">
+                        <div class="card-bg-filter" id="volcano"></div>
+                        <h2>Volcano</h2>
+                        <div class="text-content">
+                            <p class="h3 pt-3">A Realm of Fire and Fury</p>
+                            <p class="">This fiery land is as dangerous as it is rewarding.
+                                Harness geothermal energy and powerful metals to become an unstoppable force. Just don’t
+                                get burned.</p>
                         </div>
+                        <img src="./img/Volcanointro.png" alt="">
                     </div>
-                    <div class="col" id="desert">
-                        <div class="card d-flex align-items-center justify-content-end text-center pb-3"
-                            style="background-image: url(./img/card-img-3.png);">
-                            <h3>Desert</h3>
+
+                    <!-- volcano intro end -->
+
+                    <!-- desert intro -->
+
+                    <div class="card d-flex text-center p-5" style="background-image: url(./img/card-img-3.png);"
+                        id="desert">
+                        <div class="card-bg-filter"></div>
+                        <h2>Desert</h2>
+                        <div class="text-content">
+                            <p class="h3 pt-3">Endless Sand, Endless Struggle</p>
+                            <p class="">The Desert tests every survival skill.The hidden beneath the dunes are veins of gold and
+                                lost technologies of a forgotten age. </p>
                         </div>
+                        <img src="./img/Desertintro.png" alt="">
                     </div>
+
+                    <!-- desert intro end -->
+
                 </div>
             </section>
 
@@ -491,6 +533,17 @@
             <p class="h4" style="margin: 0; max-width:0px; ">Wish List Now</p>
         </div>
     </a>
+
+    <!-- fixed window area -->
+
+    <!-- forest map intro -->
+    <!-- <div class="world-popup d-flex justify-content-center align-items-center">
+        <div class="popup-content">
+
+        </div>
+
+     </div> -->
+    <!-- forest map intro end -->
 
     <footer class="container-fluid text-center bg-black py-5">
         <ul class="d-flex justify-content-center flex-column gap-3 gap-md-5 text-center flex-md-row align-items-md-end">

@@ -232,10 +232,11 @@ main .bg-filter {
 }
 
 /* main-wrapper z-index */
-.main-wrapper{
-    position:relative;
+.main-wrapper {
+    position: relative;
     z-index: 0;
 }
+
 /* Hero section */
 section.hero {
     padding-top: 25vh;
@@ -254,66 +255,238 @@ section.hero {
 
 /* Lore section */
 section.lore {
-    video{
+    video {
         object-fit: cover;
         max-height: 50vh;
     }
 }
 
-/* word section */
-section.world {
-    /* background-color: var(--section-bg-color); */
-}
+
+/* world section */
+
 
 .world div.card {
     height: 25vh;
+    max-height: auto;
     overflow: hidden;
     position: relative;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-}
+    --bs-card-border-width: 0px;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
 
-/* card-md-height */
-@media screen and (min-width: 768px) {
-    .world div.card {
-        height: 50vh;
+    h2 {
+        z-index: 2;
+        position: relative;
+        top: 80%;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    p {
+        position: relative;
+        z-index: 1;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s all ease-in-out;
+    }
+
+    img {
+        display: none;
     }
 }
 
-.world div.card::after {
-    content: "";
+.world div.card.card-active {
+    position: relative;
+    height: 90vh;
+    max-height: 800px;
+
+    .card-bg-filter {
+        opacity: 0;
+    }
+
+    h2 {
+        top: 0;
+        transform: scale(1.4) translateY(0rem);
+    }
+
+    p {
+        position: relative;
+        z-index: 1;
+        display: block;
+        max-height: 100%;
+    }
+
+    img {
+        position: absolute;
+        bottom: auto;
+        z-index: 0;
+        filter: blur(1px);
+        display: block;
+    }
+
+}
+
+
+
+.card-bg-filter {
     position: absolute;
-    inset: 0;
     z-index: 1;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: grayscale(80%) blur(0.5px);
-    pointer-events: none;
+    backdrop-filter: grayscale(0.8);
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    border-radius: inherit;
+    background: #00000004;
+    transition: all 0.3s ease-in-out;
+
 }
 
-.world div.card:hover::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    backdrop-filter: grayscale(50%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+.card-hover {
+    .card-bg-filter {
+        opacity: 0;
+    }
+
+    h2 {
+        transform: scale(1.4) translateY(-10px);
+    }
 }
 
-.world div.card h3 {
-    z-index: 2;
-    transition: transform 0.5s ease-in-out;
+
+
+/* world card-md */
+@media screen and (min-width: 768px) {
+
+    .world div.card {
+        height: 50vh;
+        max-width: 400px;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        position: relative;
+        background-size: cover;
+        --bs-card-border-width: 0px;
+        transition: max-width 0.3s ease-in-out;
+        align-items: center;
+
+        h2 {
+            z-index: 2;
+            position: relative;
+            top: 80%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        p {
+            position: relative;
+            z-index: 1;
+            max-width: 0;
+            overflow: hidden;
+            transition: 0.3s all ease-in-out;
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+
+
+    .world div.card.card-active {
+        height: 50vh;
+        position: relative;
+        align-items: start;
+        max-width: 800px;
+
+        .card-bg-filter {
+            opacity: 0;
+        }
+
+        .text-content {
+            text-align: start;
+        }
+
+        h2 {
+            top: 0;
+            transform: scale(1.4) translateY(0rem);
+        }
+
+        p {
+            position: relative;
+            z-index: 1;
+            display: block;
+            max-width: 100%;
+           text-shadow: 4px 2px 10px #000000, 4px 2px 10px #000000;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            bottom: -10%;
+            z-index: 0;
+            filter: blur(0px);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* object-position: center; */
+            display: block;
+        }
+
+    }
+
+
+
+    .card-bg-filter {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: grayscale(0.8);
+        opacity: 1;
+        background: #00000004;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .card-hover {
+        .card-bg-filter {
+            opacity: 0;
+        }
+
+        h2 {
+            transform: scale(1.4) translateY(-10px);
+        }
+    }
+
 }
 
-.world div.card:hover>h3 {
-    transform: scale(1.4) translateY(-5px);
+/* end of md */
+/* lg card */
+@media screen and (min-width: 992px) {
+.world div.card{
+    padding: 4rem !important;
 }
+.world div.card.card-active{
+    padding: 3rem !important;
+}
+}
+/* lg-card end */
+/* xl-card */
+@media screen and (min-width: 1200px) {
+.world div.card{
+    padding: 6rem !important;
+    height: 60vh;
+}
+.world div.card.card-active{
+    padding: 4rem !important;
+    height: 60vh;
+
+}
+}
+/* xl-card end */
 
 /* game system intro section */
 
@@ -443,9 +616,10 @@ div.tab-pane.active {
 }
 
 /* whish list */
-.wishList{
+.wishList {
     padding-bottom: 200px;
 }
+
 .wishList iframe {
     width: 100%;
     max-width: 600px;
@@ -481,6 +655,29 @@ div.tab-pane.active {
 
     transition: all ease 0.3s, transform ease 0.5s;
 }
+
+
+/* fixed window area */
+
+.world-popup {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000bb;
+    backdrop-filter: blur(5px);
+
+    .popup-content {
+        background: #000000;
+        width: 90vw;
+        height: 80vh;
+        border-radius: 1rem;
+    }
+}
+
+
 
 /* footer */
 footer {
