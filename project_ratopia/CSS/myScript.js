@@ -7,13 +7,11 @@ const controls = document.querySelectorAll(".carouselBtn");
 
 controls.forEach(
     (x) => {
-
         x.addEventListener('click', () => {
             const slideIndex = x.getAttribute('data-slide-to');
             carousel.to(slideIndex);
             // console.log(li); 
             carousel.cycle();
-
         })
     }
 )
@@ -60,7 +58,7 @@ window.addEventListener("scroll", () => {
     const brightness = 100 - Math.min(scrollY / maxScroll, 1) * 90;
     const blur = Math.min(scrollY / maxScroll, 1) * 5;
     mainFilter.style.backdropFilter = `brightness(${brightness}%) blur(${blur}px)`;
-    console.log(scrollY);
+    // console.log(scrollY);
 
 }
 
@@ -68,7 +66,8 @@ window.addEventListener("scroll", () => {
 
 
 // world card hover
-const worldCard = document.querySelectorAll(".world div.card")
+const worldCard = document.querySelectorAll(".world div.card");
+
 worldCard.forEach(card => {
     card.addEventListener("mouseover", () => {
         if (card.classList.contains("card-active")) return;
@@ -79,14 +78,19 @@ worldCard.forEach(card => {
         card.classList.remove("card-hover");
     });
 
-    // click event
-    card.addEventListener("click", () => {
+    // world card click event
+    card.addEventListener("click", (e) => {
+        // console.log('e.target :>> ', e.target);
         const isActive = card.classList.contains("card-active");
-        worldCard.forEach(c => c.classList.remove("card-active"));
+        if (e.target !== card.querySelector(".card-bg-filter")) return;
+
         if (isActive) {
+            if (e.target == document.querySelector(".card p")) return;
             card.classList.remove("card-active");
+
         }
         if (!isActive) {
+            worldCard.forEach(c => c.classList.remove("card-active"));
             card.classList.add("card-active");
         }
     });
