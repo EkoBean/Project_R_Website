@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <header class="fixed-top z-5">
+    <header class="fixed-top z-3">
 
         <nav
             class="navbar flex-nowrap flex-column flex-sm-row nav-justified justify-content-center justify-content-sm-between navbar-expand-lg pt-4 px-1 container-fluid">
@@ -93,7 +93,7 @@
             </section>
 
             <!--world  -->
-            <section id="world" class="world topSpace container-fluid">
+            <section id="world" class="world topSpace container-lg">
                 <h2 class="text-center mb-4">
                     Pick Your Playground!
                 </h2>
@@ -157,7 +157,8 @@
                         <h2>Desert</h2>
                         <div class="text-content">
                             <p class="h3 pt-3">Endless Sand, Endless Struggle</p>
-                            <p class="">The Desert tests every survival skill.The hidden beneath the dunes are veins of gold and
+                            <p class="">The Desert tests every survival skill.The hidden beneath the dunes are veins of
+                                gold and
                                 lost technologies of a forgotten age. </p>
                         </div>
                         <img src="./img/Desertintro.png" alt="">
@@ -341,8 +342,8 @@
 
                         <!-- news card 1 -->
                         <!-- if need to change style, through css selector by .card -->
-                        <div class="col" id="news1">
-                            <div class="card" style="position: relative;">
+                        <div class="col" id="news-card-1">
+                            <div class="card" style="position: relative;"  data-target="news-popup-1">
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
                                     <img class="card-img " src="https://dummyimage.com/200x200" alt="">
                                     <!-- nesting text content & more button -->
@@ -363,8 +364,8 @@
                                             </p>
                                         </div>
                                         <!-- more button -->
-                                        <div class="d-flex justify-content-end w-100">
-                                            <a name="" id="" class="btn py-0 " href="#" role="button">more</a>
+                                        <div class="d-flex pb-4 pb-sm-0 justify-content-end w-100">
+                                            <a name="" id="" class="btn py-0 " role="button">more</a>
                                         </div><!-- more button end -->
                                     </div>
                                 </div>
@@ -381,7 +382,7 @@
                             </div>
                         </div> <!-- news card1 end -->
                         <!-- news card 2 -->
-                        <div class="col" id="news2">
+                        <div class="col" id="news-button-2">
                             <div class="card container-sm" style="position: relative;">
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
                                     <img class="card-img " src="https://dummyimage.com/200x200" alt="">
@@ -403,8 +404,8 @@
                                             </p>
                                         </div>
                                         <!-- more button -->
-                                        <div class="d-flex justify-content-end w-100">
-                                            <a name="" id="" class="btn py-0 " href="#" role="button">more</a>
+                                        <div class="d-flex justify-content-end w-100 pb-4 pb-sm-0">
+                                            <a name="" id="" class="btn py-0 " role="button">more</a>
                                         </div><!-- more button end -->
                                     </div>
                                 </div>
@@ -421,7 +422,7 @@
                             </div>
                         </div> <!-- news card2 end -->
                         <!-- news card 3 -->
-                        <div class="col" id="news3">
+                        <div class="col" id="news-button-3">
                             <div class="card container-sm" style="position: relative;">
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
                                     <img class="card-img " src="https://dummyimage.com/200x200" alt="">
@@ -443,8 +444,8 @@
                                             </p>
                                         </div>
                                         <!-- more button -->
-                                        <div class="d-flex justify-content-end w-100">
-                                            <a name="" id="" class="btn py-0 " href="#" role="button">more</a>
+                                        <div class="d-flex justify-content-end w-100 pb-4 pb-sm-0 ">
+                                            <a name="" id="" class="btn py-0 " role="button">more</a>
                                         </div><!-- more button end -->
                                     </div>
                                 </div>
@@ -461,7 +462,7 @@
                             </div>
                         </div> <!-- news card3 end -->
                         <!-- news card 4 -->
-                        <div class="col" id="news4">
+                        <div class="col" id="news-button-4">
                             <div class="card container-sm" style="position: relative;">
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
                                     <img class="card-img " src="https://dummyimage.com/200x200" alt="">
@@ -483,8 +484,8 @@
                                             </p>
                                         </div>
                                         <!-- more button -->
-                                        <div class="d-flex justify-content-end w-100">
-                                            <a name="" id="" class="btn py-0 " href="#" role="button">more</a>
+                                        <div class="d-flex justify-content-end w-100 pb-4 pb-sm-0">
+                                            <a name="" id="" class="btn py-0 " role="button">more</a>
                                         </div><!-- more button end -->
                                     </div>
                                 </div>
@@ -517,15 +518,11 @@
                 <div class="pt-5 container">
                     <iframe src="https://store.steampowered.com/widget/2244130/" frameborder="0" height="200"></iframe>
                 </div>
-
             </section>
-
-
-
-
         </div>
-
     </main>
+
+
     <!-- Wish List CTA fixed button -->
     <a href="#wishList" id="buyIt" class="buyIt d-none d-sm-block">
         <div class="d-flex align-items-center">
@@ -534,16 +531,26 @@
         </div>
     </a>
 
-    <!-- fixed window area -->
 
-    <!-- forest map intro -->
-    <!-- <div class="world-popup d-flex justify-content-center align-items-center">
-        <div class="popup-content">
 
+    <!-- popup window area -->
+
+    <!-- news window #1 -->
+    <div class="window-popup z-3 justify-content-center align-items-center px-5" id="news-popup-1">
+        <div class="popup-content container-sm px-0 flex-column align-items-center">
+            <img src="https://dummyimage.com/300x150" alt="">
+            <div class="context p-4">
+                <h4 class="pb-3">News Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem in omnis eligendi excepturi deleniti
+                    laudantium voluptates, architecto quas, minus magnam, debitis reprehenderit praesentium cum ipsa?
+                    Atque pariatur non saepe adipisci.</p>
+            </div>
+            <button type="button" name="" id="closeBtn" class="btn">
+                <i class="bi bi-x" style="font-size: 3rem; color: #000000;"></i>
+            </button>
         </div>
+    </div>
 
-     </div> -->
-    <!-- forest map intro end -->
 
     <footer class="container-fluid text-center bg-black py-5">
         <ul class="d-flex justify-content-center flex-column gap-3 gap-md-5 text-center flex-md-row align-items-md-end">

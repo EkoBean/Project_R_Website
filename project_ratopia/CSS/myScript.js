@@ -80,7 +80,7 @@ worldCard.forEach(card => {
 
     // world card click event
     card.addEventListener("click", (e) => {
-        // console.log('e.target :>> ', e.target);
+        console.log('e.target :>> ', e.target);
         const isActive = card.classList.contains("card-active");
         if (e.target !== card.querySelector(".card-bg-filter")) return;
 
@@ -96,3 +96,44 @@ worldCard.forEach(card => {
     });
 
 });
+
+// popup window(news)
+const newsCard = document.querySelectorAll(".news .card");
+
+newsCard.forEach(card => {
+
+
+    const trigger = card.querySelectorAll("img, .h3, a")
+    trigger.forEach(trigger => {
+        trigger.addEventListener("click", (e) => {
+            const targetId = card.getAttribute("data-target");
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.classList.add("active");
+            }
+            const close = target.querySelector("#closeBtn")
+            // close function
+            // close by click button
+            close.addEventListener("click", () => {
+                target.classList.remove("active");
+            })
+            // end of closing button
+            // close by click outsdie
+            target.addEventListener("click", (e) => {
+                if (e.target == document.querySelector(".window-popup")) {
+                    target.classList.remove("active");
+                }
+            });
+            // end of outside click
+            // close by pressing esc
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" || e.key === "Esc") {
+                    target.classList.remove("active");
+                }
+            })
+
+        });
+    });
+})
+
+
