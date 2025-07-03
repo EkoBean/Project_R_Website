@@ -104,6 +104,8 @@ newsCard.forEach(card => {
 
 
     const trigger = card.querySelectorAll("img, .h3, a")
+
+    
     trigger.forEach(trigger => {
         trigger.addEventListener("click", (e) => {
             const targetId = card.getAttribute("data-target");
@@ -120,17 +122,23 @@ newsCard.forEach(card => {
             // end of closing button
             // close by click outsdie
             target.addEventListener("click", (e) => {
-                if (e.target == document.querySelector(".window-popup")) {
-                    target.classList.remove("active");
-                }
+                const windowPopup = document.querySelectorAll(".window-popup")
+                windowPopup.forEach(windowOut => {
+                    if (e.target == windowOut) {
+                        target.classList.remove("active");
+                    }
+                });
+
             });
             // end of outside click
             // close by pressing esc
-            document.addEventListener("keydown", (e) => {
-                if (e.key === "Escape" || e.key === "Esc") {
-                    target.classList.remove("active");
-                }
-            })
+            if (target.classList.contains("active")) {
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape" || e.key === "Esc") {
+                        target.classList.remove("active");
+                    }
+                })
+            }
 
         });
     });
