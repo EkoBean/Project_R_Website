@@ -1,3 +1,5 @@
+// function library
+
 function openWindow(popupDiv) {
     popupDiv.classList.add("active")
     document.body.classList.add("no-scroll")
@@ -6,9 +8,33 @@ function closeWindow(popupDiv) {
     popupDiv.classList.remove("active")
     document.body.classList.remove("no-scroll")
 }
+// end of function library
 
 
+// nav bar js
+// stop scrolling while menu expanded
+// event listen to bootstrap.js
+const navMenu = document.getElementById("collapseNav")
+navMenu.addEventListener("show.bs.collapse", () => {
+    document.body.classList.add("no-scroll")
+})
+navMenu.addEventListener("hide.bs.collapse", () => {
+    document.body.classList.remove("no-scroll")
+})
+// end of stop menu expanded no-scrolling
 
+// hide collpase by click
+const navLinks = navMenu.querySelectorAll("a")
+navLinks.forEach(navLink => {
+    navLink.addEventListener("click", () => {
+        const bsCollapse = bootstrap.Collapse.getInstance(navMenu);
+        if (bsCollapse) {
+            bsCollapse.hide();
+        }
+    });
+});
+
+// end of nav bar js
 
 // console.log("myjs loaded"); 
 
@@ -22,7 +48,6 @@ controls.forEach(
         x.addEventListener('click', () => {
             const slideIndex = x.getAttribute('data-slide-to');
             carousel.to(slideIndex);
-            // console.log(li); 
             carousel.cycle();
         })
     }
