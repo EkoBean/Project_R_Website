@@ -101,47 +101,46 @@ worldCard.forEach(card => {
 const newsCard = document.querySelectorAll(".news .card");
 
 newsCard.forEach(card => {
+    const triggers = card.querySelectorAll("img, .h3, a")
+    const targetId = card.getAttribute("data-target");
+    const target = document.getElementById(targetId);
 
+    const openPopup = () => {
+        if (!target) return;
+        target.classList.add("active");
 
-    const trigger = card.querySelectorAll("img, .h3, a")
-
-    
-    trigger.forEach(trigger => {
-        trigger.addEventListener("click", (e) => {
-            const targetId = card.getAttribute("data-target");
-            const target = document.getElementById(targetId);
-            if (target) {
-                target.classList.add("active");
+        const escClose = (e) => {
+            if (e.key === "Esc" || e.key === "Escape") {
+                target.classList.remove("active");
+                document.removeEventListener("keydown", escClose)
             }
-            const close = target.querySelector("#closeBtn")
-            // close function
-            // close by click button
+        };
+        document.addEventListener("keydown", escClose)
+    }
+
+
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener("click", openPopup);
+    });
+
+    if (target) {
+        const close = target.querySelector("#closeBtn")
+        // close by click button
+        if (close) {
             close.addEventListener("click", () => {
                 target.classList.remove("active");
             })
-            // end of closing button
-            // close by click outsdie
-            target.addEventListener("click", (e) => {
-                const windowPopup = document.querySelectorAll(".window-popup")
-                windowPopup.forEach(windowOut => {
-                    if (e.target == windowOut) {
-                        target.classList.remove("active");
-                    }
-                });
+        }
+        // end of closing button
 
-            });
-            // end of outside click
-            // close by pressing esc
-            if (target.classList.contains("active")) {
-                document.addEventListener("keydown", (e) => {
-                    if (e.key === "Escape" || e.key === "Esc") {
-                        target.classList.remove("active");
-                    }
-                })
-            }
-
+        // close by click outsdie
+        target.addEventListener("click", (e) => {
+            target.classList.remove("active");
         });
-    });
+        //end of close by click outside
+    }
+
 })
 
 
