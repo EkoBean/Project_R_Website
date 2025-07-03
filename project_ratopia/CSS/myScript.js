@@ -1,3 +1,15 @@
+function openWindow(popupDiv) {
+    popupDiv.classList.add("active")
+    document.body.classList.add("no-scroll")
+}
+function closeWindow(popupDiv) {
+    popupDiv.classList.remove("active")
+    document.body.classList.remove("no-scroll")
+}
+
+
+
+
 // console.log("myjs loaded"); 
 
 const customizeCarousel = document.getElementById("gameSystemCarousel")
@@ -80,7 +92,6 @@ worldCard.forEach(card => {
 
     // world card click event
     card.addEventListener("click", (e) => {
-        console.log('e.target :>> ', e.target);
         const isActive = card.classList.contains("card-active");
         if (e.target !== card.querySelector(".card-bg-filter")) return;
 
@@ -107,11 +118,12 @@ newsCard.forEach(card => {
 
     const openPopup = () => {
         if (!target) return;
-        target.classList.add("active");
+        openWindow(target);
 
         const escClose = (e) => {
             if (e.key === "Esc" || e.key === "Escape") {
-                target.classList.remove("active");
+                closeWindow(target);
+
                 document.removeEventListener("keydown", escClose)
             }
         };
@@ -129,18 +141,23 @@ newsCard.forEach(card => {
         // close by click button
         if (close) {
             close.addEventListener("click", () => {
-                target.classList.remove("active");
+                closeWindow(target);
+
             })
         }
         // end of closing button
 
         // close by click outsdie
         target.addEventListener("click", (e) => {
-            target.classList.remove("active");
+            closeWindow(target);
+
         });
         //end of close by click outside
     }
 
 })
+// end of windows popup(news)
+
+
 
 
