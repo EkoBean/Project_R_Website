@@ -32,35 +32,35 @@
     <header class="p-3 text-center shadow">
         <h1>News Post Editor</h1>
     </header>
-    <form action="" class="mt-4">
-        <main class="pt-4 container-sm">
-            <!-- img input -->
-            <div class="cover-pic">
-                <h5>
-                    <label for="imageInput">Cover Image</label>
-                </h5>
-                <input class="form-control" type="file" id="imageInput" accept="image/*">
-            </div>
-
-            <h5 class="pt-3">
-                <label for="title-name">Title</label>
+    <!-- <form action="" class="mt-4"> -->
+    <main class="pt-4 container-sm">
+        <!-- img input -->
+        <div class="cover-pic">
+            <h5>
+                <label for="imageInput">Cover Image</label>
             </h5>
-            <input id="title-name" type="text" value="" placeholder="Enter the Title">
+            <input class="form-control" type="file" id="imageInput" accept="image/*">
+        </div>
+
+        <h5 class="pt-3">
+            <label for="title-name">Title</label>
+        </h5>
+        <input id="title-name" type="text" value="" placeholder="Enter the Title">
 
 
 
 
 
-            <div class="py-3">
-                <div id="editor">
-                    <p>Hello World!</p>
-                    <p>Some initial <strong>bold</strong> text</p>
-                    <p><br /></p>
-                </div>
+        <div class="py-3">
+            <div id="editor">
+                <p>Hello World!</p>
+                <p>Some initial <strong>bold</strong> text</p>
+                <p><br /></p>
             </div>
+        </div>
 
-            <button class="btn btn-secondary">Post</button>
-    </form>
+        <button class="btn btn-secondary">Post</button>
+        <!-- </form> -->
     </main>
     <footer>
         <!-- place footer here -->
@@ -76,6 +76,8 @@
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 
     <script>
+
+        // Quill set up
         const quill = new Quill('#editor', {
             modules: {
                 toolbar: [
@@ -87,6 +89,29 @@
             },
             theme: 'snow'
         });
+
+
+        //Major function
+        const postBtn = document.querySelector(".btn")
+        postBtn.addEventListener("click", () => {
+            const title = document.getElementById('title-name').value;
+            const content = document.getElementById('editor').innerHTML
+            const coverImg = document.getElementById('imageInput').files[0]
+
+            if (!coverImg) {
+                alert("Please select an image file.");
+                return;
+            }
+
+            const reader = new FileReader
+            reader.onload = () => {
+
+                const article = {
+                    title, content, coverImg
+                }
+            }
+
+        })
 
     </script>
 </body>
