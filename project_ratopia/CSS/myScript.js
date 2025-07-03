@@ -137,9 +137,12 @@ worldCard.forEach(card => {
 const newsCard = document.querySelectorAll(".news .card");
 
 newsCard.forEach(card => {
-    const triggers = card.querySelectorAll("img, .h3, a")
+    const triggers = card.querySelectorAll(".cardimg, .h3, a")
     const targetId = card.getAttribute("data-target");
     const target = document.getElementById(targetId);
+
+
+
 
     const openPopup = () => {
         if (!target) return;
@@ -163,6 +166,8 @@ newsCard.forEach(card => {
 
     if (target) {
         const close = target.querySelector("#closeBtn")
+
+
         // close by click button
         if (close) {
             close.addEventListener("click", () => {
@@ -174,7 +179,8 @@ newsCard.forEach(card => {
 
         // close by click outsdie
         target.addEventListener("click", (e) => {
-            closeWindow(target);
+            if(e.target === target){
+            closeWindow(target);}
 
         });
         //end of close by click outside
@@ -182,6 +188,25 @@ newsCard.forEach(card => {
 
 })
 // end of windows popup(news)
+
+// sync the window with news card
+const newsDivs = document.querySelectorAll(".window-popup");
+newsDivs.forEach(newsDiv => {
+    // link the wond and card
+    const windowId = newsDiv.getAttribute("id");
+    const targetCard = document.querySelector(`div[data-target="${windowId}"]`)
+
+    // content things
+    const newsImage = newsDiv.querySelector("img").getAttribute('src');
+    const newsTitle = newsDiv.querySelector("h4").textContent;
+    const newsContent = newsDiv.querySelector("p").textContent;
+
+    // sync the content
+    targetCard.querySelector("img").setAttribute('src', newsImage);
+    targetCard.querySelector("div.h3").innerText = newsTitle;
+    targetCard.querySelector("p").innerText = newsContent;
+
+});
 
 
 

@@ -61,8 +61,7 @@
             <!-- #top anchor -->
             <div id="top" style="position: absolute; top:0;"></div>
             <!-- Hero Section -->
-            <section class="hero d-flex flex-column justify-content-center align-items-center text-center"
-                style="background-image: url('./img/hero-bg.jpg'); background-size: cover; height: 90vh; color: white;">
+            <section class="hero d-flex flex-column justify-content-center align-items-center text-center" style="height: 90vh;">
                 <div class="container">
                     <h1 class="h1 display-4" style="text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);">Build, Govern, Thrive
                         —
@@ -343,14 +342,19 @@
                         <!-- news card 1 -->
                         <!-- if need to change style, through css selector by .card -->
                         <div class="col" id="news-card-1">
-                            <div class="card" style="position: relative;" data-target="news-popup-1">
+                            <div class="card d-flex gap-4 flex-column flex-sm-row" style="position: relative;"
+                                data-target="news-popup-1">
+                                <div class="cardimg">
+                                    <img src="https://dummyimage.com/200x200" alt="">
+                                </div>
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
-                                    <img class="card-img " src="https://dummyimage.com/200x200" alt="">
                                     <!-- nesting text content & more button -->
                                     <div class="d-flex flex-column">
                                         <!-- text box -->
                                         <div class="text px-4 px-sm-0">
-                                            <div class="h3 pb-3 border-bottom">News Title</div>
+                                            <div class="border-bottom ">
+                                                <div class="h3 line-clamp-2">News Title</div>
+                                            </div>
                                             <p class="line-clamp-4">Lorem ipsum dolor sit amet consectetur adipisicing
                                                 elit.
                                                 Adipisci commodi natus
@@ -381,16 +385,22 @@
                                 <!-- decoration diamond end -->
                             </div>
                         </div> <!-- news card1 end -->
+
                         <!-- news card 2 -->
-                        <div class="col" id="news-button-2">
-                            <div class="card container-sm" style="position: relative;" data-target="news-popup-2">
+                        <div class="col" id="news-card-2">
+                            <div class="card d-flex gap-4 flex-column flex-sm-row" style="position: relative;"
+                                data-target="news-popup-2">
+                                <div class="cardimg">
+                                    <img src="" alt="">
+                                </div>
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
-                                    <img class="card-img " src="https://dummyimage.com/200x200" alt="">
                                     <!-- nesting text content & more button -->
                                     <div class="d-flex flex-column">
                                         <!-- text box -->
                                         <div class="text px-4 px-sm-0">
-                                            <div class="h3 pb-3 border-bottom">News Title</div>
+                                            <div class="border-bottom">
+                                                <div class="h3 line-clamp-2">News Title</div>
+                                            </div>
                                             <p class="line-clamp-4">Lorem ipsum dolor sit amet consectetur adipisicing
                                                 elit.
                                                 Adipisci commodi natus
@@ -404,7 +414,7 @@
                                             </p>
                                         </div>
                                         <!-- more button -->
-                                        <div class="d-flex justify-content-end w-100 pb-4 pb-sm-0">
+                                        <div class="d-flex pb-4 pb-sm-0 justify-content-end w-100">
                                             <a name="" id="" class="btn py-0 " role="button">more</a>
                                         </div><!-- more button end -->
                                     </div>
@@ -421,16 +431,23 @@
                                 <!-- decoration diamond end -->
                             </div>
                         </div> <!-- news card2 end -->
+
+
                         <!-- news card 3 -->
-                        <div class="col" id="news-button-3">
-                            <div class="card container-sm" style="position: relative;" data-target="news-popup-3">
+                        <div class="col" id="news-card-3">
+                            <div class="card d-flex gap-4 flex-column flex-sm-row" style="position: relative;"
+                                data-target="news-popup-3">
+                                <div class="cardimg">
+                                    <img src="https://dummyimage.com/200x200" alt="">
+                                </div>
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
-                                    <img class="card-img " src="https://dummyimage.com/200x200" alt="">
                                     <!-- nesting text content & more button -->
                                     <div class="d-flex flex-column">
                                         <!-- text box -->
                                         <div class="text px-4 px-sm-0">
-                                            <div class="h3 pb-3 border-bottom">News Title</div>
+                                            <div class="border-bottom ">
+                                                <div class="h3 line-clamp-2">News Title</div>
+                                            </div>
                                             <p class="line-clamp-4">Lorem ipsum dolor sit amet consectetur adipisicing
                                                 elit.
                                                 Adipisci commodi natus
@@ -444,7 +461,7 @@
                                             </p>
                                         </div>
                                         <!-- more button -->
-                                        <div class="d-flex justify-content-end w-100 pb-4 pb-sm-0 ">
+                                        <div class="d-flex pb-4 pb-sm-0 justify-content-end w-100">
                                             <a name="" id="" class="btn py-0 " role="button">more</a>
                                         </div><!-- more button end -->
                                     </div>
@@ -461,16 +478,22 @@
                                 <!-- decoration diamond end -->
                             </div>
                         </div> <!-- news card3 end -->
+
                         <!-- news card 4 -->
-                        <div class="col" id="news-button-4">
-                            <div class="card container-sm" style="position: relative;" data-target="news-popup-4">
+                        <div class="col" id="news-card-4">
+                            <div class="card d-flex gap-4 flex-column flex-sm-row" style="position: relative;"
+                                data-target="news-popup-4">
+                                <div class="cardimg">
+                                    <img src="https://dummyimage.com/200x200" alt="">
+                                </div>
                                 <div class="context d-flex flex-column flex-sm-row gap-4 align-items-start">
-                                    <img class="card-img " src="https://dummyimage.com/200x200" alt="">
                                     <!-- nesting text content & more button -->
                                     <div class="d-flex flex-column">
                                         <!-- text box -->
                                         <div class="text px-4 px-sm-0">
-                                            <div class="h3 pb-3 border-bottom">News Title</div>
+                                            <div class=" border-bottom ">
+                                                <div class="h3 line-clamp-2">News Title</div>
+                                            </div>
                                             <p class="line-clamp-4">Lorem ipsum dolor sit amet consectetur adipisicing
                                                 elit.
                                                 Adipisci commodi natus
@@ -484,7 +507,7 @@
                                             </p>
                                         </div>
                                         <!-- more button -->
-                                        <div class="d-flex justify-content-end w-100 pb-4 pb-sm-0">
+                                        <div class="d-flex pb-4 pb-sm-0 justify-content-end w-100">
                                             <a name="" id="" class="btn py-0 " role="button">more</a>
                                         </div><!-- more button end -->
                                     </div>
@@ -538,12 +561,41 @@
     <!-- news window #1 -->
     <div class="window-popup z-3 justify-content-center align-items-center px-5" id="news-popup-1">
         <div class="popup-content container-sm px-0 flex-column align-items-center">
-            <img src="https://dummyimage.com/300x150" alt="">
-            <div class="context p-4">
-                <h4 class="pb-3">News Title</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem in omnis eligendi excepturi deleniti
-                    laudantium voluptates, architecto quas, minus magnam, debitis reprehenderit praesentium cum ipsa?
-                    Atque pariatur non saepe adipisci.</p>
+            <img src="./img/news pic 01.png" alt="">
+            <div class="context p-4 p-sm-5">
+                <h4 class="pb-3">Ratopia Reaches 200,000 Players!</h4>
+                <h5>Hello dear leaders of Ratopia!!</h5>
+                <p>Today, we’re here to share the exciting news that over 200,000 players have joined us in Ratopia,
+                    along with a preview of the upcoming updates. We sincerely thank you for your generous feedback and
+                    warm support throughout your journey of building a magnificent city. Now, let us briefly introduce
+                    what we have planned for future development.</p>
+                <ul>
+                    <li style="list-style: disc;">
+                        Porter Station feature overhaul
+                    </li>
+                    <li style="list-style: disc;">
+                        Quality of life improvements
+                    </li>
+                    <li style="list-style: disc;">
+                        New Structures
+                    </li>
+
+                    <li style="list-style: disc;">
+                        Additional dungeons </li>
+                </ul>
+                <p>
+                    Since launch, we’ve improved electricity production, adjusted the difficulty of religion, added the
+                    Relocate feature, and fixed various bugs. While the patch direction after release was initially
+                    broad in scope, we’re gradually refining it with more specific plans. There is still a good
+                    possibility that elements not on the list above will be added as well, and we plan to continue
+                    applying players' requests in ways that align with the game's direction.</p>
+                <p>We had hoped to share this a bit earlier, but now we deliver it with heartfelt thanks. Achieving the
+                    high milestone of 200,000 copies sold was by no means an easy feat. All of this was made possible
+                    thanks to your interest and support. Once again, we sincerely thank you.</p>
+                <p>We will continue working to improve the game and provide an even better gameplay experience. Next
+                    week, we’ll be back with updates including the Porter Station overhaul and the addition of a male
+                    Leader.
+                    We wish you a wonderful week ahead!</p>
             </div>
             <button type="button" name="" id="closeBtn" class="btn">
                 <i class="bi bi-x" style="font-size: 3rem; color: #000000;"></i>
@@ -555,12 +607,58 @@
     <!-- news window #2 -->
     <div class="window-popup z-3 justify-content-center align-items-center px-5" id="news-popup-2">
         <div class="popup-content container-sm px-0 flex-column align-items-center">
-            <img src="https://dummyimage.com/300x150" alt="">
-            <div class="context p-4">
-                <h4 class="pb-3">News Title2</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem in omnis eligendi excepturi deleniti
-                    laudantium voluptates, architecto quas, minus magnam, debitis reprehenderit praesentium cum ipsa?
-                    Atque pariatur non saepe adipisci.</p>
+            <img src="./img/news pic 02.png" alt="">
+            <div class="context p-4 p-sm-5">
+                <h4 class="pb-3">Ratopia Official Release!</h4>
+                <p>End of Early Access
+
+                    Hello dear leaders of Ratopia!! <br>
+                    This is Cassel, the developer of Ratopia. As of today,
+                    Ratopia has officially launched after three years of development and one and a half
+                    years in Early Access. <br>
+                    First, I would like to sincerely thank the team members who have worked diligently
+                    and persistently over the years, and everyone who has continuously shown their
+                    interest and support. <br>
+
+                    Development for Ratopia began in November 2020, and it was released in Early
+                    Access on November 1, 2023. Since then, we have improved the content and user
+                    experience based on valuable feedback and suggestions from many users. <br>
+                    Below are the key elements that were added or changed during the Early Access
+                    period: <br>
+                <ul>
+                    <li>
+                        -Scientist-themed structures and electricity system
+
+                    </li>
+                    <li>
+                        -Shaman-themed structures and religion system
+                    </li>
+                    <li>
+                        -Equipment Reforging system
+                    </li>
+                    -City Milestone system
+                    <li>
+                    </li>
+                    -Leader Perk system
+                    <li>
+                        -Disease system
+                    </li>
+                    <li>
+                        -Loot drop system from defeating enemies
+                    </li>
+                </ul>
+                </p>
+                <img src="./img/news pic 02 01.gif" alt="">
+                <h5>▶An encyclopedia feature has been added, allowing you to view information about enemies, animals,
+                    and plants.</h5>
+                <p>
+                <ul>
+                    <li>- You can access the information through the menu or the Admin function.</li>
+                    <li>- Information is registered when the leader attacks enemies, hunts animals, or gathers plants.
+                    </li>
+                </ul>
+                </p>
+                <img src="./img/news pic 02 02.gif" alt="">
             </div>
             <button type="button" name="" id="closeBtn" class="btn">
                 <i class="bi bi-x" style="font-size: 3rem; color: #000000;"></i>
@@ -573,12 +671,36 @@
     <!-- news window #3 -->
     <div class="window-popup z-3 justify-content-center align-items-center px-5" id="news-popup-3">
         <div class="popup-content container-sm px-0 flex-column align-items-center">
-            <img src="https://dummyimage.com/300x150" alt="">
-            <div class="context p-4">
-                <h4 class="pb-3">News Title3</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem in omnis eligendi excepturi deleniti
-                    laudantium voluptates, architecto quas, minus magnam, debitis reprehenderit praesentium cum ipsa?
-                    Atque pariatur non saepe adipisci.</p>
+            <img src="./img/news pic 03.png" alt="">
+            <div class="context p-4 p-sm-5">
+                <h4 class="pb-3">1.0.0220 Update</h4>
+                <p>Hello dear leaders of Ratopia!! <br>
+                    In this update, we’ve tried our best to reflect the various feedback you have provided in the game.
+                    However, due to technical limitations and time constraints, we regret that we couldn’t implement all
+                    suggestions immediately. Please continue to share your feedback on areas that need improvement, and
+                    we will prioritize them for future updates. Positive feedback is also very helpful in shaping the
+                    direction of upcoming updates, so we greatly appreciate your input! steamhappy</p>
+
+                <h4>Localization</h4>
+                <p>💌Added Brazilian Portuguese and Spanish Translation
+                    Special thanks to Erick Dias, Lyan "23LIEF", Miirielzeira, Olivia, and everyone who helped with the
+                    translation work on Discord.</p>
+                <h4>Patch List</h4>
+                <p>**For convenient gaming experience, please begin a new game**
+
+                <h5>▶💌 Milestone system has been added.</h5>
+                - Milestones provide various effects that help with city management. <br>
+                - When prosperity increases, three milestones are presented after the scene. <br> <br>
+                - The milestone groups you can choose from are the same for 2, 3, 4 prosperity levels; 5, 6, 7
+                prosperity levels; and 8, 9 prosperity levels. <br>
+                - The number of milestone refreshes depends on the difficulty level: 3 times for easy, 1 time for <br>
+                normal, and 1 time for hard.
+                - With the addition of milestone effects, the assembly point has been removed from the level 4
+                prosperity reward. <br>
+                - Try selecting different milestones and make your city thrive even more! <br>
+                </p>
+                <img src="./img/news pic 03 01.gif" alt="">
+
             </div>
             <button type="button" name="" id="closeBtn" class="btn">
                 <i class="bi bi-x" style="font-size: 3rem; color: #000000;"></i>
@@ -590,12 +712,17 @@
     <!-- news window #4 -->
     <div class="window-popup z-3 justify-content-center align-items-center px-5" id="news-popup-4">
         <div class="popup-content container-sm px-0 flex-column align-items-center">
-            <img src="https://dummyimage.com/300x150" alt="">
-            <div class="context p-4">
-                <h4 class="pb-3">News Title4</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem in omnis eligendi excepturi deleniti
-                    laudantium voluptates, architecto quas, minus magnam, debitis reprehenderit praesentium cum ipsa?
-                    Atque pariatur non saepe adipisci.</p>
+            <img src="./img/news pic 04.png" alt="">
+            <div class="context p-4 p-sm-5">
+                <h4 class="pb-3">Ratopia DevDiary #30 - Trading Post and Milestone System</h4>
+                <p>Hello all, it's Cassel, developer of Ratopia.
+                    September is already upon us. It feels like time is flying by. While we've been rushing to
+                    develop content, we've had little time to add the great ideas that the players have provided.
+                    Therefore, throughout August, we decided to focus on developing the features suggested by the
+                    players. I would like to take this opportunity to thank everyone who sent in their ideas once
+                    again. <br>
+                    <img src="./img/news pic 04 01.png" alt=""><br>
+                </p>
             </div>
             <button type="button" name="" id="closeBtn" class="btn">
                 <i class="bi bi-x" style="font-size: 3rem; color: #000000;"></i>
