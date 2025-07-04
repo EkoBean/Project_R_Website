@@ -656,6 +656,12 @@ div.tab-pane.active {
         width: 200px;
         flex-shrink: 0;
     }
+    .news .context{
+        width: 100%;
+        div{
+            width: 100%;
+        }
+    }
 
     .news img {
         width: 100%;
@@ -747,16 +753,17 @@ div.tab-pane.active {
 
         img:first-child {
             width: 100%;
+            height: 100%;
             height: 35vh;
             object-fit: cover;
             -webkit-user-drag: none;
         }
 
-        .context {
+        .article-content{
+
             img {
                 width: 100%;
-                padding-top: 2rem;
-                padding-bottom: 2rem;
+                height: 100%;
             }
         }
 

@@ -32,7 +32,7 @@
     <header class="p-3 text-center shadow">
         <h1>News Post Editor</h1>
     </header>
-    <!-- <form action="" class="mt-4"> -->
+    <form action="" class="mt-4">
     <main class="pt-4 container-sm">
         <!-- img input -->
         <div class="cover-pic">
@@ -60,7 +60,7 @@
         </div>
 
         <button class="btn btn-secondary">Post</button>
-        <!-- </form> -->
+        </form>
     </main>
     <footer>
         <!-- place footer here -->
@@ -95,7 +95,7 @@
         const postBtn = document.querySelector(".btn")
         postBtn.addEventListener("click", () => {
             const title = document.getElementById('title-name').value;
-            const content = document.getElementById('editor').innerHTML
+            const content = document.querySelector('#editor .ql-editor').innerHTML
             const coverImg = document.getElementById('imageInput').files[0]
 
             if (!coverImg) {
@@ -105,12 +105,15 @@
 
             const reader = new FileReader
             reader.onload = () => {
-
+                const imagebase64 = reader.result;
                 const article = {
-                    title, content, coverImg
+                    title,
+                    content,
+                    coverImg: imagebase64
                 }
+                localStorage.setItem('blog-item', JSON.stringify(article));
             }
-
+            reader.readAsDataURL(coverImg);
         })
 
     </script>

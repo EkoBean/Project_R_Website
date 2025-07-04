@@ -179,8 +179,9 @@ newsCard.forEach(card => {
 
         // close by click outsdie
         target.addEventListener("click", (e) => {
-            if(e.target === target){
-            closeWindow(target);}
+            if (e.target === target) {
+                closeWindow(target);
+            }
 
         });
         //end of close by click outside
@@ -188,6 +189,19 @@ newsCard.forEach(card => {
 
 })
 // end of windows popup(news)
+
+
+
+// read localstorage to news window
+
+const newsArticle = document.querySelector(".window-popup");
+const lStorage = JSON.parse(localStorage.getItem('blog-item'));
+if (lStorage) {
+    newsArticle.querySelector('h4').innerText = lStorage.title
+    newsArticle.querySelector('.article-content').innerHTML = lStorage.content;
+    newsArticle.querySelector('img').src = lStorage.coverImg
+}
+
 
 // sync the window with news card
 const newsDivs = document.querySelectorAll(".window-popup");
@@ -199,7 +213,7 @@ newsDivs.forEach(newsDiv => {
     // content things
     const newsImage = newsDiv.querySelector("img").getAttribute('src');
     const newsTitle = newsDiv.querySelector("h4").textContent;
-    const newsContent = newsDiv.querySelector("p").textContent;
+    const newsContent = newsDiv.querySelector(".article-content").textContent;
 
     // sync the content
     targetCard.querySelector("img").setAttribute('src', newsImage);
@@ -207,7 +221,6 @@ newsDivs.forEach(newsDiv => {
     targetCard.querySelector("p").innerText = newsContent;
 
 });
-
-
+// end of sync news window & card
 
 
