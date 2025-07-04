@@ -78,18 +78,42 @@
     <script>
 
         // Quill set up
+        const toolbarOptions = {
+            handlers: {
+                // handlers object will be merged with default handlers object
+                link: function (value) {
+                    if (value) {
+                        const href = prompt('Enter the URL');
+                        this.quill.format('link', href);
+                    } else {
+                        this.quill.format('link', false);
+                    }
+                }
+            }
+        };
         const quill = new Quill('#editor', {
             modules: {
-                toolbar: [
-                    [{ header: [4, 5, true] }],
-                    ['image', 'bold', 'underline', 'strike'],
-                    [{ 'list': 'ordered' }, { 'list': 'bullet' },],
-                    ['clean'],
-                ],
+                toolbar: {
+                    container: [
+                        [{ header: [4, 5, true] }],
+                        ['image', 'bold', 'underline', 'strike'],
+                        [{ list: 'ordered' }, { list: 'bullet' }],
+                        ['clean']
+                    ],
+                    handlers: {
+                        image: function () {
+                            const range = this.quill.getSelection();
+                            const url = prompt("請輸入圖片網址");
+
+                            if (url) {
+                                this.quill.insertEmbed(range.index, 'image', url, Quill.sources.USER);
+                            }
+                        }
+                    }
+                }
             },
             theme: 'snow'
         });
-
 
         //Major function
 
@@ -115,7 +139,7 @@
                 // relist article array
                 const articles = JSON.parse(localStorage.getItem('blog-item')) || []
                 articles.unshift(article);
-                if(articles.length > 4){
+                if (articles.length > 4) {
                     articles.pop();
                 }
 
