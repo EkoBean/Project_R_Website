@@ -194,12 +194,22 @@ newsCard.forEach(card => {
 
 // read localstorage to news window
 
-const newsArticle = document.querySelector(".window-popup");
+const newsArticles = document.querySelectorAll(".window-popup");
 const lStorage = JSON.parse(localStorage.getItem('blog-item'));
 if (lStorage) {
-    newsArticle.querySelector('h4').innerText = lStorage.title
-    newsArticle.querySelector('.article-content').innerHTML = lStorage.content;
-    newsArticle.querySelector('img').src = lStorage.coverImg
+    let i = -1
+    newsArticles.forEach(newsArticle => {
+        i++
+
+        if (newsArticle.id == `news-popup-${i + 1}`) {
+            if (lStorage[i]) {
+                newsArticle.querySelector('h4').innerText = lStorage[i].title;
+                newsArticle.querySelector('.article-content').innerHTML = lStorage[i].content;
+                newsArticle.querySelector('img').src = lStorage[i].coverImg;
+            }
+        }
+
+    })
 }
 
 

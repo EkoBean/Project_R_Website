@@ -33,34 +33,34 @@
         <h1>News Post Editor</h1>
     </header>
     <form action="" class="mt-4">
-    <main class="pt-4 container-sm">
-        <!-- img input -->
-        <div class="cover-pic">
-            <h5>
-                <label for="imageInput">Cover Image</label>
-            </h5>
-            <input class="form-control" type="file" id="imageInput" accept="image/*">
-        </div>
-
-        <h5 class="pt-3">
-            <label for="title-name">Title</label>
-        </h5>
-        <input id="title-name" type="text" value="" placeholder="Enter the Title">
-
-
-
-
-
-        <div class="py-3">
-            <div id="editor">
-                <p>Hello World!</p>
-                <p>Some initial <strong>bold</strong> text</p>
-                <p><br /></p>
+        <main class="pt-4 container-sm">
+            <!-- img input -->
+            <div class="cover-pic">
+                <h5>
+                    <label for="imageInput">Cover Image</label>
+                </h5>
+                <input class="form-control" type="file" id="imageInput" accept="image/*">
             </div>
-        </div>
 
-        <button class="btn btn-secondary">Post</button>
-        </form>
+            <h5 class="pt-3">
+                <label for="title-name">Title</label>
+            </h5>
+            <input id="title-name" type="text" value="" placeholder="Enter the Title">
+
+
+
+
+
+            <div class="py-3">
+                <div id="editor">
+                    <p>Hello World!</p>
+                    <p>Some initial <strong>bold</strong> text</p>
+                    <p><br /></p>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary">Post</button>
+    </form>
     </main>
     <footer>
         <!-- place footer here -->
@@ -92,8 +92,9 @@
 
 
         //Major function
-        const postBtn = document.querySelector(".btn")
-        postBtn.addEventListener("click", () => {
+
+
+        function postArticle(i) {
             const title = document.getElementById('title-name').value;
             const content = document.querySelector('#editor .ql-editor').innerHTML
             const coverImg = document.getElementById('imageInput').files[0]
@@ -111,9 +112,32 @@
                     content,
                     coverImg: imagebase64
                 }
-                localStorage.setItem('blog-item', JSON.stringify(article));
+                // relist article array
+                const articles = JSON.parse(localStorage.getItem('blog-item')) || []
+                articles.unshift(article);
+                if(articles.length > 4){
+                    articles.pop();
+                }
+
+
+                localStorage.setItem('blog-item', JSON.stringify(articles));
             }
             reader.readAsDataURL(coverImg);
+        }
+
+
+        const postBtn = document.querySelector(".btn")
+        let i = 0
+        postBtn.addEventListener("click", () => {
+            if (i < 4) {
+                i++
+                postArticle(i);
+
+            }
+            else {
+                i = 1
+                postArticle(i);
+            }
         })
 
     </script>
