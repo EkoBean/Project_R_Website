@@ -610,7 +610,6 @@ div.tab-pane.active {
         font-family: var(--bs-body-font-family);
         cursor: pointer;
         height: 2.5em;
-        display: flex;
         align-items: center;
     }
 
@@ -627,6 +626,9 @@ div.tab-pane.active {
 
     a.btn {
         font-size: 1.3rem;
+    }
+    .border-bottom.d-flex{
+        align-items: center;
     }
 
 }
